@@ -1,0 +1,37 @@
+{
+  "name": "gst-financial-ai-calculator",
+  "version": "1.0.0",
+  "description": "AI-powered GST and Financial Calculator",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [
+    "gst",
+    "calculator",
+    "financial",
+    "tax",
+    "emi",
+    "sip",
+    "ai"
+  ],
+  "author": "Bhindi AI",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "axios": "^1.6.2",
+    "jspdf": "^2.5.1",
+    "recharts": "^2.10.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6"
+  }
+}
