@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import TaxCalculator from '../components/TaxCalculator';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('gst');
@@ -74,16 +75,6 @@ export default function Home() {
                 GST Calculator
               </button>
               <button
-                onClick={() => setActiveTab('emi')}
-                className={`flex-1 py-4 px-6 font-semibold transition ${
-                  activeTab === 'emi'
-                    ? 'bg-indigo-600 text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
-                EMI Calculator
-              </button>
-              <button
                 onClick={() => setActiveTab('tax')}
                 className={`flex-1 py-4 px-6 font-semibold transition ${
                   activeTab === 'tax'
@@ -92,6 +83,16 @@ export default function Home() {
                 }`}
               >
                 Tax Calculator
+              </button>
+              <button
+                onClick={() => setActiveTab('emi')}
+                className={`flex-1 py-4 px-6 font-semibold transition ${
+                  activeTab === 'emi'
+                    ? 'bg-indigo-600 text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                EMI Calculator
               </button>
             </div>
 
@@ -180,16 +181,11 @@ export default function Home() {
                 </div>
               )}
 
+              {activeTab === 'tax' && <TaxCalculator />}
+
               {activeTab === 'emi' && (
                 <div className="text-center py-12">
                   <h2 className="text-2xl font-bold text-gray-800 mb-4">EMI Calculator</h2>
-                  <p className="text-gray-600">Coming soon...</p>
-                </div>
-              )}
-
-              {activeTab === 'tax' && (
-                <div className="text-center py-12">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Tax Calculator</h2>
                   <p className="text-gray-600">Coming soon...</p>
                 </div>
               )}
